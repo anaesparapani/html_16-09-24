@@ -1,23 +1,106 @@
-/*seletor universal*/
 *{
-    background-color: aquamarine;
-    color: antiquewhite;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
 
-/*Estilização por nome de tag*/
-h1{
-    background-color: lightblue;
+body{
+    font-family: arial, sans-serif;
+    background-color: rgb(255, 248, 169);
     color: black;
+    /*Garante que o body ocupe toda a altura da tela*/
+    min-height: 100vh;
 }
 
-/*Estilização por seletor de classe*/
-.titulo{
-    background-color: rgb(88, 211, 219);
-    color: whitesmoke;
+header{
+    background-color: rgb(255, 245, 196);
+    padding: 20px;
+    color:black;
+    text-align: center;
 }
 
-/*Estilização por seletor de id*/
-#destaque{
-    background-color: rgb(0, 255, 234);
+header .logo{
+    /*uso do flex para alinhar a logo e o titulo*/
+    display: flex;
+    /*Alinha verticalmente os intems da div em questão*/
+    align-items: center;
+    /*centraliza o conteudo horizontalmente*/
+    justify-content: center;
+
+    background-color: rgb(255, 214, 51);
+
+}
+
+header .log img{
+    width: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+header .logo h1{
+    margin-bottom: 10px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li{
+    margin: 0 15px;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+main{
+    padding: 20px;
+}
+
+main section{
+    margin-bottom: 40px;
+}
+
+#home{
+    background-color: rgb(255, 214, 51);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#home h2{
+    color: bisque;
+}
+
+.eventos-container{
+    display: flex;
+    gap: 20px;
+}
+
+.eventos-item{
+    background-color: rgb(255, 214, 51);
+    color: bisque;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+footer{
     color: white;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
